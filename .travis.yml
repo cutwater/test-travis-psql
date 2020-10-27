@@ -11,5 +11,5 @@ addons:
 jobs:
   include:
   - stage: test
-    before_script: psql -U postgres 'CREATE EXTENSION "uuid-ossp";'
+    before_script: psql -U postgres -c 'CREATE EXTENSION "uuid-ossp";'
     script: echo 1
